@@ -1,0 +1,357 @@
+/*la jerarquia de CSS primero es el ID, despues la clase y por ultimo la etiqueta
+CSS lo considera por "pesos" id = 100, class= 10 etiqueta = 1
+ form p = 1+1 = 2
+ p = 1
+ .test = 10
+ p.test = 1 + 10 = 11
+ in line "vale" mas que todo
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+
+    position: absolute;
+    top: 110px;
+    right: 0px;
+
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/*hover es para resaltar alguna caracteristica al momento de que el usuario pasa el mouse por encima*/
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    /*
+    Se sustituye todo esto por solo border
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;*/
+
+    border-radius: 10px;
+
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+/*active captura el clic del mouse*/
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.descipcion{
+    font-size: 18px;
+}
+
+.precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copirigth{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/*margin: cero para arriba  cero a la derecha  20px para abjo, con la coma podemos anexar estilos a textarea*/
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+/*margin: 20px para ariba y para abajo y cero 0 en la verticas que es a los lados*/
+.checkbox{
+ margin: 20px 0;
+}
+
+.Enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+/*transform: scale(1.2) rotate(70deg); scale aumenta el boton y rotate lo gira*/
+.Enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+    
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*aqui inicia el CCS para pagina home*/
+
+.banner{
+    width: 100%;
+}
+
+/*Selectores avanzados
+.main > p{ <--- solo al parrafo hijo de main
+    background: red;
+}
+
+.img + p{ <--- un parrafo despues de la imagen
+    background: red;
+}
+
+.img ~ p{ <-- aplicalo a todos los parrafos despues de la imagen 
+    background: red;
+}
+
+.principal p: not(#mision){ <-- aplicalo a todos los parrafos menos a mision 
+    background: red;
+}
+
+.main > p + h2{ <--- seleccionar el ultimo h2
+    background: red;
+}
+
+*/
+
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal p{
+
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+/*linear-gradient(45deg, orange 50%, blue) para generar el degradado automatico o en circulo radial-gradient()*/
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa_contenido{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista_diferenciales{
+
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+
+/*pseudo elementos 
+p: first-line{
+    font-style: italic;
+}
+*/
+
+.items:before{
+    content: "*"
+}
+
+/*pseudo clase: nth-child() para indicarle el hijo exacto a modificar*/
+
+.items:first-child{
+font-weight: bold;
+}
+
+/*box-shadow: derecha, abajo, difuminado, tamaño de sombra, #000000; para las sombras*/
+
+.imagen_diferenciales{
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+    
+}
+
+.imagen_diferenciales:hover{
+    opacity: 0.3;
+    
+}
+
+.video{
+    width: 940px; 
+    margin: 3em auto; 
+    text-align: center;
+}
+
+/*ejemplo de como centralizar video (a mi me gusto con un width="100%")
+
+.video{
+    width: 560px; Esa era la altura inicial del video
+    margin: 1em auto; automatico a los laterales
+}
+*/
+
+/*media query para dispositivos moviles*/
+
+@media screen and (max-width:480px){
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa_contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    .lista_diferenciales, .imagen_diferenciales{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
